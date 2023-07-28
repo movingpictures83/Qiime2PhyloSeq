@@ -120,8 +120,9 @@ class Qiime2PhyloSeqPlugin:
               taxarow[i] = taxarow[i].replace('[', '')
               taxarow[i] = taxarow[i].replace(']', '')
           self.tax_table.append(taxarow)
-
-       self.otu_table[0][0] = ''
+       #print(self.otu_table[0][0])
+       #self.otu_table[0][0] = ''
+       self.otu_table[0] = ['',] + self.otu_table[0]
        for i in range(1, len(self.otu_table)):
           self.otu_table[i][0] = "OTU"+str(i)
 
